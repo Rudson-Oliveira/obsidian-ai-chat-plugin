@@ -1,0 +1,10 @@
+{
+	"id": "obsidian-ai-assistant",
+	"name": "AI Assistant for Obsidian",
+	"version": "1.0.0",
+	"minAppVersion": "0.15.0",
+	"description": "Chat com IA integrado ao Obsidian para automação e assistência em linguagem natural",
+	"author": "Manus AI",
+	"authorUrl": "https://github.com/Rudson-Oliveira",
+	"isDesktopOnly": false
+}
