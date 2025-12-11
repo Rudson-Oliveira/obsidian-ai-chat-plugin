@@ -80,11 +80,16 @@ export default class AIAssistantPlugin extends Plugin {
 			leaf = leaves[0];
 		} else {
 			// Criar nova view no painel direito
-			leaf = workspace.getRightLeaf(false);
-			await leaf.setViewState({ type: VIEW_TYPE_AI_CHAT, active: true });
+			const newLeaf = workspace.getRightLeaf(false);
+			if (newLeaf) {
+				await newLeaf.setViewState({ type: VIEW_TYPE_AI_CHAT, active: true });
+				leaf = newLeaf;
+			}
 		}
 
-		workspace.revealLeaf(leaf);
+		if (leaf) {
+			workspace.revealLeaf(leaf);
+		}
 	}
 }
 
